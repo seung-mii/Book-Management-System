@@ -1,0 +1,31 @@
+footer {
+    position : fixed;
+    bottom : 0;
+    width: 100%;
+}
+
+footer ul {
+    width: 100%;
+    display: flex;
+    margin-top: 15px 0px;
+    padding: 15px 0px;
+    justify-content: center;
+    border-top: 2px solid purple;
+}
+
+footer ul>li {
+    font-size: 12px;
+    padding: 0px 5px;
+    font-weight: 700;
+}
+
+footer ul>li a {
+    color: rgb(72, 72, 72);
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+}
