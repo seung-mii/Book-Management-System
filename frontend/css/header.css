@@ -80,6 +80,10 @@ header ul.main_menu ul.cartoon_type_1, ul.cartoon_type_2, ul.cartoon_type_3 {
     display: none;
 }
 
+header ul.main_menu ul.cartoon_type_1:hover, ul.cartoon_type_2:hover, ul.cartoon_type_3:hover {
+    display: block;
+}
+
 header ul.main_menu ul>li {
     z-index: 9;
     font-size: 17px;
