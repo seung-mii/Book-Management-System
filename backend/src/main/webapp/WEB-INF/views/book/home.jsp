@@ -5,17 +5,14 @@
 	<head>
 		<title>HomePage</title>
 	    
-	    <!-- SWIPER -->
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-	    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
-	
-	    <!-- ScrollMagic -->
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-	    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> 
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
 	    <link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet" type="text/css" />
-	    <link href="${pageContext.request.contextPath}/resources/css/silde.css" rel="stylesheet" type="text/css"/>  
-	    <link href="${pageContext.request.contextPath}/resources/css/book-list.css?after" rel="stylesheet" type="text/css" />  
-	    <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet" type="text/css"/>
+	    <link href="${pageContext.request.contextPath}/resources/css/slide.css" rel="stylesheet" type="text/css"/>  
+	    <link href="${pageContext.request.contextPath}/resources/css/book-list.css" rel="stylesheet" type="text/css" />  
+	    <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet" type="text/css" />  
 	</head>
 	<body>
 	    <header>
@@ -75,50 +72,68 @@
 	        </nav>
 	    </header>
 	
-	    <section>
-	        <h3>▸ 추천도서</h3>
-	        <!-- <div class="inner">
-	            <div class="swiper">
-	                <div class="swiper-wrapper">
-	                    <div class="swiper-slide">
-	                        <img src="../image/flower.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/fox.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/lightning.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/moon.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/nature.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/space.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/flower.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/flower.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/flower.jpg" alt=""/>
-	                    </div>
-	                    <div class="swiper-slide">
-	                        <img src="../image/flower.jpg" alt=""/>
-	                    </div>
-	                </div>
-	            </div>
-	            <div class="swiper-prev">
-	                <div>&lang;</div>
-	            </div>
-	            <div class="swiper-next">
-	                <div>&rang;</div>
-	            </div>
-	        </div> -->
+        <h3>▸ 추천도서</h3>
+        <section class="slide">
+            <div class="inner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image1.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image2.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image3.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image4.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image5.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image6.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image7.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image8.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image1.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image2.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image3.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image4.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image5.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image6.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image7.jpeg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="${pageContext.request.contextPath}/resources/image/image8.jpeg" alt="" />
+                        </div>
+                    </div>
+                    <div class="swiper-prev">
+                        &lang;
+                    </div>
+                    <div class="swiper-next">
+                        &rang;
+                    </div>
+                </div>
+            </div>
 	
 	        <div class="book_setting">
 	            <div>
@@ -183,8 +198,8 @@
 	        <hr />
 	        <p>Copyright © JSS Inc. All Rights Reserved</p>
 	    </footer>
+
 	    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/header.js"></script>
-	    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/home.js"></script>
 	    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slide.js"></script>
 	</body>
 </html>
