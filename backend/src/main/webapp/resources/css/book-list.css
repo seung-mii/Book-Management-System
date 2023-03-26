@@ -24,7 +24,8 @@ section .book_setting {
     margin: 20px 0px;
 }
 
-section input {
+section input#search {
+    height: 40px;
     padding: 0px 10px;
     margin-right: 10px;
     border-radius: 0.5ch;
@@ -33,12 +34,12 @@ section input {
     font-size: 18px;
 }
 
-section button {
+section button, input#button {
     width: 100px;
     height: 40px;
     color: purple;
     font-size: 18px;
-    margin-right: 5.5px;
+    margin-right: 10px;
     background-color: white;
     border-radius: 0.5ch;
     border: 2px solid purple;
@@ -51,11 +52,17 @@ section button:hover {
     transition: 0.2s;
 }
 
+section input#button:hover {
+    color: white;
+    background-color: purple;
+    transition: 0.2s;
+}
+
 section table {
     width: 100%;
-    height: 100%;
     border-top: 2px solid purple;
     padding: 10px 0px;
+   	max-height: 300px;
 }
 
 section td {
@@ -80,6 +87,7 @@ section thead td:last-child {
 
 section tbody tr {
     background-color: rgb(217, 236, 239);
+    height: 50px;
 }
 
 section tbody td {

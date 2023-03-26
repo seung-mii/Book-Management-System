@@ -134,42 +134,8 @@
                     </div>
                 </div>
             </div>
-	
-	        <div class="book_setting">
-	            <div>
-				    <form>
-				        <input type="text" placeholder="검색" name="keyword" value="${keyword}" />
-				        <input type="submit" value="검색" />
-				    </form>	
-	                <button onclick="location.href='/search'">검색</button>
-	                <button onclick="location.href='/create'">생성</button>
-	            </div>
-	        </div>
-	
-	        <h3>▸ HOME</h3>
-	        <table>
-	            <thead>
-	                <tr>
-	                    <td>제목</td>
-	                    <td>카테고리</td>
-	                    <td>가격</td>
-	                </tr>
-	            </thead>
-	            <tbody>
-					<c:forEach var="row" items="${data}">
-						<tr>
-							<td>
-								<a href="/detail?bookId=${row.book_id}">
-									${row.title}
-								</a>
-							</td>
-							<td>${row.category}</td>
-							<td><fmt:formatNumber type="number" maxFractionDigits="3" value="${row.price}" /></td>
-						</tr>
-					</c:forEach>
-	            </tbody>
-	        </table>
 	    </section>
+		<%@ include file="list.jsp" %>
 	
 	    <footer>
 	        <ul>

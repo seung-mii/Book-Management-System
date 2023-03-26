@@ -15,4 +15,5 @@ public interface BookService {
 
 	List<Map<String, Object>> list(Map<String, Object> map);
 
+	List<Map<String, Object>> listLimit(Map<String, Object> map);
 }

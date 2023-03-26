@@ -11,24 +11,28 @@ import org.springframework.stereotype.Repository;
 public class BookDao {
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
-	
+
 	public int insert(Map<String, Object> map) {
-	  return this.sqlSessionTemplate.insert("book.insert", map);
+		return this.sqlSessionTemplate.insert("book.insert", map);
 	}
-	
+
 	public Map<String, Object> selectDetail(Map<String, Object> map) {
-	    return this.sqlSessionTemplate.selectOne("book.select_detail", map);
+		return this.sqlSessionTemplate.selectOne("book.select_detail", map);
 	}
-	
+
 	public int update(Map<String, Object> map) {
-	    return this.sqlSessionTemplate.update("book.update", map);
+		return this.sqlSessionTemplate.update("book.update", map);
 	}
-	
+
 	public int delete(Map<String, Object> map) {
-	    return this.sqlSessionTemplate.delete("book.delete", map);
+		return this.sqlSessionTemplate.delete("book.delete", map);
 	}
-	
+
 	public List<Map<String, Object>> selectList(Map<String, Object> map) {
-	    return this.sqlSessionTemplate.selectList("book.select_list", map);
+		return this.sqlSessionTemplate.selectList("book.select_list", map);
+	}
+
+	public List<Map<String, Object>> selectListLimit(Map<String, Object> map) {
+		return this.sqlSessionTemplate.selectList("book.select_list_limit", map);
 	}
 }
