@@ -65,7 +65,7 @@
 	            </ul>
 	        </nav>
 	    </header>
-	
+
 	    <section>
 	        <h3>▸ 책 상세</h3>
 	        <table>
@@ -80,11 +80,11 @@
 	                </tr>
 	                <tr>
 	                    <td>국가</td>
-	                    <td>일본</td>
+	                    <td>${ data.country }</td>
 	                </tr>
 	                <tr>
 	                    <td>장르</td>
-	                    <td>소년만화</td>
+	                    <td>${ data.genre }</td>
 	                </tr>
 	                <tr>
 	                    <td>가격</td>
@@ -100,10 +100,7 @@
 	            <button onClick="location.href='/update?bookId=${bookId}'">수정</button>
 				<form method="POST" action="/delete">
 					<input type="hidden" name="bookId" value="${bookId}" />
-					<input type="submit" value="삭제" 
-	        			   style="width: 100px; height: 40px; margin: auto; color: purple; 
-	        		      	 	  font-size: 18px; margin-right: 10px; background-color: white;
-					  	  	 	  border-radius: 0.5ch; border: 2px solid purple; cursor: pointer;"/>
+					<input id="button" type="submit" value="삭제"/>
 				</form>
 	        </div>
 			<a href="/list" id="tolist" style="margin-left:20px; font-size: 18px; color: purple; font-weight: 700;">목록으로</a>

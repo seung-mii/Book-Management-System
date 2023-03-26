@@ -4,41 +4,41 @@
 	<insert id="insert" parameterType="hashMap"
 		useGeneratedKeys="true" keyProperty="book_id">		
 	    <![CDATA[
-	    insert into book
-	    (title, category, price) 
-	    values
-	    (#{title}, #{category}, #{price})
+		    insert into book
+		    (title, category, country, genre, price) 
+		    values
+		    (#{title}, #{category}, #{country}, #{genre}, #{price})
 	    ]]>
 	</insert>
+	
 	<select id="select_detail" parameterType="hashMap"
 		resultType="hashMap">
 	    <![CDATA[
 	        select
 	        title,
 	        category,
+	        country, 
+	        genre, 
 	        price,
-		insert_date
-	        from
-	        book
-	        where
-	        book_id = #{bookId}			
+			insert_date from book where book_id = #{bookId}			
 	    ]]>
 	</select>
+	
 	<update id="update" parameterType="hashMap">
 	    <![CDATA[
 	        update book set 
 	        title = #{title},
 	        category = #{category},
+	        country = #{country}, 
+	        genre = #{genre}, 
 	        price = #{price}
-	        where
-	        book_id = #{bookId}
+	        where book_id = #{bookId}
 	    ]]>
 	</update>
+	
 	<delete id="delete" parameterType="hashMap">
 		<![CDATA[
-		        delete from book
-		        where
-		        book_id = #{bookId}
+		        delete from book where book_id = #{bookId}
 		    ]]>
 	</delete>
 			
@@ -48,11 +48,10 @@
 	    book_id,
 	    title,
 	    category,
+        country, 
+        genre, 
 	    price,
-	    insert_date
-	    from
-	    book
-	    where 1 = 1
+	    insert_date from book where 1 = 1 
 	    ]]>
 	    <if test="keyword != null and keyword != ''">
 	      and (title like CONCAT('%',#{keyword},'%') or category like CONCAT('%',#{keyword},'%'))
@@ -66,6 +65,8 @@
 	    book_id,
 	    title,
 	    category,
+        country, 
+        genre, 
 	    price,
 	    insert_date from book where 1 = 1 
 	    ]]>
@@ -73,5 +74,5 @@
 	      	and (title like CONCAT('%',#{keyword},'%') or category like CONCAT('%',#{keyword},'%') or <![CDATA[price <= #{keyword}]]>) 
 	    </if>
 	    order by insert_date desc limit 5
-	</select>
+	</select>	
 </mapper>
