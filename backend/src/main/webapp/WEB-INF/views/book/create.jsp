@@ -86,40 +86,40 @@
 		                <tr>
 		                    <td>국가</td>
 		                    <td>
-		                        <select class="nation" required>
+		                        <select class="nation" name="country" onchange="showValue(this)" required>
 		                            <option value="" disabled selected>국가를 선택하시오</option>
-		                            <option value="kor">대한민국</option>
-		                            <option value="jap">일본</option>
-		                            <option value="usa">미국</option>
+		                            <option value="대한민국">대한민국</option>
+		                            <option value="일본">일본</option>
+		                            <option value="미국">미국</option>
 		                        </select>
 		                    </td>
 		                </tr>
 		                <tr>
 		                    <td>장르</td>
 		                    <td>
-		                        <select class="genre kor" required>
+		                        <select class="kor" name="genre">
 		                            <option value="" disabled selected>장르를 선택하시오</option>
-		                            <option value="kor_1">순정만화</option>
-		                            <option value="kor_2">소년만화</option>
-		                            <option value="kor_3">성인만화</option>
-		                            <option value="kor_4">기획도서</option>
-		                            <option value="kor_5">만화잡지</option>
+		                            <option value="순정만화">순정만화</option>
+		                            <option value="소년만화">소년만화</option>
+		                            <option value="성인만화">성인만화</option>
+		                            <option value="기획도서">기획도서</option>
+		                            <option value="만화잡지">만화잡지</option>
 		                        </select>
 		
-		                        <!-- <select class="genre jap" required>
+		                        <select class="jap" name="genre">
 		                            <option value="" disabled selected>장르를 선택하시오</option>
-		                            <option value="jap_1">순정만화</option>
-		                            <option value="jap_2">소년만화</option>
-		                            <option value="jap_3">성인만화</option>
-		                            <option value="jap_4">기획도서</option>
+		                            <option value="순정만화">순정만화</option>
+		                            <option value="소년만화">소년만화</option>
+		                            <option value="성인만화">성인만화</option>
+		                            <option value="기획도서">기획도서</option>
 		                        </select>
 		
-		                        <select class="genre usa" required>
+		                        <select class="usa" name="genre">
 		                            <option value="" disabled selected>장르를 선택하시오</option>
-		                            <option value="usa_1">DC 코믹스마블</option>
-		                            <option value="usa_2">코믹스리터러리</option>
-		                            <option value="usa_3">그래픽노블</option>
-		                        </select> -->
+		                            <option value="DC 코믹스마블">DC 코믹스마블</option>
+		                            <option value="코믹스리터러리">코믹스리터러리</option>
+		                            <option value="그래픽노블">그래픽노블</option>
+		                        </select> 
 		                    </td>
 		                </tr>
 		                <tr class="last_tr">
@@ -130,20 +130,10 @@
 		                </tr>
 		            </tbody>
 		        </table>
-		        <!-- input css 적용이 안됨 -->
-	        	<input id="button" type="submit" value="저장" 
-	        		
-			    />
+	        	<input id="button" type="submit" value="저장" />
 			</form>
-	        
-			<!-- <form method="POST">
-				<p>제목 : <input type="text" name="title" /></p>
-				<p>카테고리 : <input type="text" name="category" /></p>
-				<p>가격 : <input type="text" name="price" /></p>
-				<p><input type="submit" value="저장" />
-			</form> -->
 	    </section>
-	    
+		
 	    <footer>
 	        <ul>
 	            <li>

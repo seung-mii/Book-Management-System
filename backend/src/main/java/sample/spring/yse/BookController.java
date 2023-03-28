@@ -97,7 +97,7 @@ public class BookController {
 
 		boolean isDeleteSuccess = this.bookService.remove(map);
 		if (isDeleteSuccess) {
-			mav.setViewName("redirect:/list");
+			mav.setViewName("redirect:/home");
 		} else {
 			String bookId = map.get("bookId").toString();
 			mav.setViewName("redirect:/detail?bookId=" + bookId);

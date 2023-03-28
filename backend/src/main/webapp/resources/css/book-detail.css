@@ -44,7 +44,12 @@ section tbody tr.last_tr td {
     border-bottom: 1px solid rgb(183, 183, 183);
 }
 
+section .jap, .usa {
+	display: none;
+}
+
 section tbody tr td input {
+    text-align: left;
     width: 100%;
     height: 70%;
     outline: none;
@@ -52,6 +57,10 @@ section tbody tr td input {
     padding: 0px 10px;
     border-radius: 0.2ch;    
     border: 1px solid rgb(118, 118, 118);
+}
+
+section tbody tr td input[type="number"] {
+    text-align: right;
 }
 
 section tbody tr td select {
@@ -71,14 +80,13 @@ select option[value=""][disabled] {
 	display: none;
 }
 
-section input#button {
+button, section input#button {
     width: 100px;
     height: 40px;
-    margin: auto;
-    justify-content: end;
+    float: right;
     color: purple;
     font-size: 18px;
-    /* margin-right: 10px; */
+    margin-right: 20px;
     background-color: white;
     border-radius: 0.5ch;
     border: 2px solid purple;
@@ -86,6 +94,12 @@ section input#button {
 }
 
 section input#button:hover {
+    color: white;
+    background-color: purple;
+    transition: 0.2s;
+}
+
+button:hover {
     color: white;
     background-color: purple;
     transition: 0.2s;
