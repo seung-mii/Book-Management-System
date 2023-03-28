@@ -31,8 +31,12 @@ public class BookDao {
 	public List<Map<String, Object>> selectList(Map<String, Object> map) {
 		return this.sqlSessionTemplate.selectList("book.select_list", map);
 	}
-
+	
 	public List<Map<String, Object>> selectListLimit(Map<String, Object> map) {
 		return this.sqlSessionTemplate.selectList("book.select_list_limit", map);
+	}
+
+	public List<Map<String, Object>> selectCategory(Map<String, Object> map) {
+		return this.sqlSessionTemplate.selectList("book.select_category", map);
 	}
 }

@@ -36,33 +36,88 @@
 	            </nav>
 	        </div>
 	        <nav>
-	            <ul class="main_menu">
-	                <li>HOME</li>
-	                <li>국내 만화
-	                    <ul class="cartoon_type_1">
-	                        <li>순정만화</li>
-	                        <li>소년만화</li>
-	                        <li>성인만화</li>
-	                        <li>기획도서</li>
-	                        <li>만화잡지</li>
-	                    </ul>
-	                </li>
-	                <li>일본 만화
-	                    <ul class="cartoon_type_2">
-	                        <li>순정만화</li>
-	                        <li>소년만화</li>
-	                        <li>성인만화</li>
-	                        <li>기획도서</li>
-	                    </ul>
-	                </li>
-	                <li>미국 만화
-	                    <ul class="cartoon_type_3">
-	                        <li>DC 코믹스마블</li>
-	                        <li>코믹스리터러리</li>
-	                        <li>그래픽노블</li>
-	                    </ul>
-	                </li>
-	            </ul>
+				<form method="POST">
+		            <ul class="main_menu">
+	                    <li> 
+	                        <a href="/home">HOME</a>
+	                    </li>
+		                <li class="item">
+                   			<div class="item_name">국내만화</div>
+		                    <ul class="item_contents">
+		                        <li>
+									<a href="/category?country=대한민국&genre=순정만화">
+										순정만화
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=대한민국&genre=소년만화">
+										소년만화
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=대한민국&genre=성인만화">
+										성인만화
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=대한민국&genre=기획도서">
+										기획도서
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=대한민국&genre=만화잡지">
+										만화잡지
+									</a>
+								</li>
+		                    </ul>
+		                </li>
+		                <li class="item">
+                   			<div class="item_name">일본만화</div>
+		                    <ul class="item_contents">
+		                        <li>
+									<a href="/category?country=일본&genre=순정만화">
+										순정만화
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=일본&genre=소년만화">
+										소년만화
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=일본&genre=성인만화">
+										성인만화
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=일본&genre=기획도서">
+										기획도서
+									</a>
+								</li>
+		                    </ul>
+		                </li>
+		                <li class="item">
+                   			<div class="item_name">미국만화</div>
+		                    <ul class="item_contents">
+		                        <li>
+									<a href="/category?country=미국&genre=DC 코믹스마블">
+										DC 코믹스마블
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=미국&genre=코믹스리터러리">
+										코믹스 리터러리
+									</a>
+								</li>
+		                        <li>
+									<a href="/category?country=미국&genre=그래픽노블">
+										그래픽노블
+									</a>
+								</li>
+		                    </ul>
+		                </li>
+		            </ul>
+				</form>
 	        </nav>
 	    </header>
 	
@@ -133,7 +188,7 @@
 	        	<input id="button" type="submit" value="저장" />
 			</form>
 	    </section>
-		
+	    
 	    <footer>
 	        <ul>
 	            <li>

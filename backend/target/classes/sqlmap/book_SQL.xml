@@ -75,4 +75,20 @@
 	    </if>
 	    order by insert_date desc limit 5
 	</select>	
+	
+	<select id="select_category" parameterType="hashMap" resultType="hashMap">
+	  <![CDATA[
+		    select
+		    book_id,
+		    title,
+		    category,
+	        country, 
+	        genre, 
+		    price,
+		    insert_date
+		    from book
+		 	where country = #{country} and genre = #{genre}
+	    ]]>
+	</select>	
+
 </mapper>

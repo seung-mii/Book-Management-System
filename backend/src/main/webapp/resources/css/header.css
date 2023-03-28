@@ -20,7 +20,7 @@ header {
     padding: 20px;
     border-bottom: 2px solid purple;
     box-shadow: 0 10px 4px -4px rgb(232, 232, 232);
-    margin-bottom: 100px;
+    margin-bottom: 130px;
 }
 
 header h1 {
@@ -62,34 +62,31 @@ header ul.main_menu li {
     cursor: pointer;
 }
 
-header ul.main_menu>li:first-child {
-    font-weight: 700;
-}
-
 header ul.main_menu ul {
     z-index: 9999;
     font-weight: 400;
     border: 2px solid purple;
-    padding: 5px 10px;
+    margin-top:7px;
+    padding: 8px 10px;
     border-radius: 0.5ch;
     background-color: rgb(243, 243, 243);
 }
 
-header ul.main_menu ul.cartoon_type_1, ul.cartoon_type_2, ul.cartoon_type_3 {
+header ul.main_menu .item ul.item_contents {
     display: none;
 }
 
-header ul.main_menu ul.cartoon_type_1:hover, ul.cartoon_type_2:hover, ul.cartoon_type_3:hover {
+header ul.main_menu .item:hover ul.item_contents {
     display: block;
 }
 
 header ul.main_menu ul>li {
     z-index: 9;
-    font-size: 17px;
-    padding: 4px 4px 1px 4px;
+    font-size: 15px;
+    padding: 5px;
     cursor: pointer;
 }
 
-header ul.main_menu ul>li:hover {
-    background-color: rgb(228, 228, 228);
+header ul.main_menu ul>li a:hover {
+    background-color: rgb(208, 208, 208);
 }

@@ -3,13 +3,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 	<head>
-		<title>Search</title>
-	
-	    <link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet" type="text/css" />
+		<title>책 목록</title>
+		
+		<link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet" type="text/css" />
+	    <link href="${pageContext.request.contextPath}/resources/css/slide.css" rel="stylesheet" type="text/css"/>  
 	    <link href="${pageContext.request.contextPath}/resources/css/book-list.css" rel="stylesheet" type="text/css" />  
 	    <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet" type="text/css"/>
 	</head>
-	<body>
+	<body>		    
 		<header>
 	        <div class="top_menu">
 	            <h1>OK24 Comics</h1>
@@ -39,9 +40,11 @@
 	        <nav>
 				<form method="POST">
 		            <ul class="main_menu">
-	                    <li> <a href="/home" style="font-weight: 700;">HOME</a> </li>
+	                    <li> 
+	                        <a href="/home">HOME</a>
+	                    </li>
 		                <li class="item">
-		                	<div class="item_name">국내만화</div>
+							<div class="item_name">국내만화</div>
 		                    <ul class="item_contents">
 		                        <li>
 									<a href="/category?country=대한민국&genre=순정만화">
@@ -71,7 +74,7 @@
 		                    </ul>
 		                </li>
 		                <li class="item">
-		                	<div class="item_name">일본만화</div>
+							<div class="item_name">일본만화</div>
 		                    <ul class="item_contents">
 		                        <li>
 									<a href="/category?country=일본&genre=순정만화">
@@ -96,7 +99,7 @@
 		                    </ul>
 		                </li>
 		                <li class="item">
-                    		<div class="item_name">미국만화</div>
+							<div class="item_name">미국만화</div>
 		                    <ul class="item_contents">
 		                        <li>
 									<a href="/category?country=미국&genre=DC 코믹스마블">
@@ -119,64 +122,41 @@
 				</form>
 	        </nav>
 	    </header>
-	
-	    <section>
-	        <h3>▸ 일본만화 / 소년만화</h3>
-	        <table>
-	            <thead>
-	                <tr>
-	                    <td>제목</td>
-	                    <td>카테고리</td>
-	                    <td>가격</td>
-	                </tr>
-	            </thead>
-	            <tbody>
-	                <tr>
-	                    <td>귀멸의 칼날 1기</td> 
-	                    <td>애니</td>
-	                    <td>10,000원</td>
-	                </tr>
-	                <tr>
-	                    <td>귀멸의 칼날 2기</td>
-	                    <td>애니</td>
-	                    <td>10,000원</td>
-	                </tr>
-	                <tr>
-	                    <td>귀멸의 칼날 3기</td>
-	                    <td>애니</td>
-	                    <td>10,000원</td>
-	                </tr>
-	            </tbody>
+	    
+		<section>
+	        <div class="book_setting">
+
+			    <form>
+			        <input id="search" type="text" placeholder="검색" name="keyword" value="${keyword}" />
+			        <input id="button" type="submit" value="검색" />
+			    </form>	
+	               <button onclick="location.href='/create'">생성</button>
+	        </div>
+
+			<h3>▸ ${item.country} / ${item.genre}</h3>
+		    <table>
+		            <thead>
+		                <tr>
+		                    <td>제목</td>
+		                    <td>카테고리</td>
+		                    <td>가격</td>
+		                </tr>
+		            </thead>
+		            <tbody>
+							<c:forEach var="row" items="${data}">
+								<tr>
+										<td>
+											<a href="/detail?bookId=${row.book_id}">
+												${row.title}
+											</a>
+										</td>
+										<td>${row.category}</td>
+										<td><fmt:formatNumber type="number" maxFractionDigits="3" value="${row.price}" /></td>
+								</tr>
+							</c:forEach>
+		            </tbody>
 	        </table>
-	    </section>
-	
-	    <footer>
-	        <ul>
-	            <li>
-	                <a href="javascript:void(0)">회사소개</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">인재채용</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">원고접수</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">제휴문의</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">고객센터</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">개인정보취급방침</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">이용약관</a>
-	            </li>
-	        </ul>
-	        <hr />
-	        <p>Copyright © JSS Inc. All Rights Reserved</p>
-	    </footer>
-	    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/header.js"></script>
+        </section>
+		<%@ include file="footer.jsp" %>
 	</body>
 </html>

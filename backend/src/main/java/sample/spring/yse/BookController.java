@@ -29,7 +29,7 @@ public class BookController {
 		mav.setViewName("book/home");
 		return mav;
 	}
-
+	
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public ModelAndView search() {
 		return new ModelAndView("book/search");
@@ -105,14 +105,35 @@ public class BookController {
 
 		return mav;
 	}
+	
+	@RequestMapping(value = "/list")  
+	public ModelAndView list(@RequestParam Map<String, Object> map) {  
+		List<Map<String, Object>> list = this.bookService.list(map);  
+	
+		ModelAndView mav = new ModelAndView();  
+		mav.addObject("data", list);  
+		mav.setViewName("/book/list");  
+		return mav;  
+	}  
 
-	@RequestMapping(value = "/list")
-	public ModelAndView list(@RequestParam Map<String, Object> map) {
-		List<Map<String, Object>> list = this.bookService.list(map);
-
+	@RequestMapping(value = "/category", method = RequestMethod.GET) // 보여주기 -> list와 유사
+	public ModelAndView category(@RequestParam Map<String, Object> map) {
+		List<Map<String, Object>> categoryList = this.bookService.categoryList(map);
+		
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("data", list);
-		mav.setViewName("/book/list");
+		
+		if(map.get("country").toString().equals("대한민국")) {
+			map.replace("country", "국내만화"); 
+		} else if(map.get("country").toString().equals("일본")) {
+			map.replace("country", "일본만화"); 
+		} else {
+			map.replace("country", "미국만화"); 
+		}
+		
+		mav.addObject("data", categoryList);
+		mav.addObject("item", map);
+		mav.setViewName("/book/category");
+
 		return mav;
 	}
 }
