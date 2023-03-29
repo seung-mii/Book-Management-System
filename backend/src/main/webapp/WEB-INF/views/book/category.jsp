@@ -44,7 +44,12 @@
 	                        <a href="/home">HOME</a>
 	                    </li>
 		                <li class="item">
-							<div class="item_name">국내만화</div>
+		                	<c:if test="${item.country eq '국내만화'}">
+                    			<div class="item_name" style="font-weight: 700;">국내만화</div>
+		                	</c:if>
+		                	<c:if test="${item.country ne '국내만화'}">
+                    			<div class="item_name">국내만화</div>
+		                	</c:if>
 		                    <ul class="item_contents">
 		                        <li>
 									<a href="/category?country=대한민국&genre=순정만화">
@@ -74,7 +79,12 @@
 		                    </ul>
 		                </li>
 		                <li class="item">
-							<div class="item_name">일본만화</div>
+		                	<c:if test="${item.country eq '일본만화'}">
+                    			<div class="item_name" style="font-weight: 700;">일본만화</div>
+		                	</c:if>
+		                	<c:if test="${item.country ne '일본만화'}">
+                    			<div class="item_name">일본만화</div>
+		                	</c:if>
 		                    <ul class="item_contents">
 		                        <li>
 									<a href="/category?country=일본&genre=순정만화">
@@ -99,7 +109,12 @@
 		                    </ul>
 		                </li>
 		                <li class="item">
-							<div class="item_name">미국만화</div>
+		                	<c:if test="${item.country eq '미국만화'}">
+                    			<div class="item_name" style="font-weight: 700;">미국만화</div>
+		                	</c:if>
+		                	<c:if test="${item.country ne '미국만화'}">
+                    			<div class="item_name">미국만화</div>
+		                	</c:if>
 		                    <ul class="item_contents">
 		                        <li>
 									<a href="/category?country=미국&genre=DC 코믹스마블">
