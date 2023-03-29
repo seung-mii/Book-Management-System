@@ -7,9 +7,8 @@
 	
 	    <link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet" type="text/css" />
 	    <link href="${pageContext.request.contextPath}/resources/css/book-list.css" rel="stylesheet" type="text/css" />  
-	    <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet" type="text/css"/>
 	</head>
-	<body>
+	<body>	    
 		<header>
 	        <div class="top_menu">
 	            <h1>OK24 Comics</h1>
@@ -39,7 +38,9 @@
 	        <nav>
 				<form method="POST">
 		            <ul class="main_menu">
-	                    <li> <a href="/home" style="font-weight: 700;">HOME</a> </li>
+	                    <li> 
+	                        <a href="/home" style="font-weight: 700;">HOME</a>
+	                    </li>
 		                <li class="item">
 		                	<div class="item_name">국내만화</div>
 		                    <ul class="item_contents">
@@ -150,33 +151,6 @@
 	        </table>
 	    </section>
 	
-	    <footer>
-	        <ul>
-	            <li>
-	                <a href="javascript:void(0)">회사소개</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">인재채용</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">원고접수</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">제휴문의</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">고객센터</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">개인정보취급방침</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">이용약관</a>
-	            </li>
-	        </ul>
-	        <hr />
-	        <p>Copyright © JSS Inc. All Rights Reserved</p>
-	    </footer>
-	    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/header.js"></script>
+		<%@ include file="footer.jsp" %>
 	</body>
 </html>

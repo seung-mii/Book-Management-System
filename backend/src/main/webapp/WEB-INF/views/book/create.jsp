@@ -4,9 +4,8 @@
 		<title>책 생성</title>
 		
 	    <link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet" type="text/css" />
-	    <link href="${pageContext.request.contextPath}/resources/css/silde.css" rel="stylesheet" type="text/css"/>  
-	    <link href="${pageContext.request.contextPath}/resources/css/book-detail.css?after" rel="stylesheet" type="text/css" />  
-	    <link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet" type="text/css"/>
+	    <link href="${pageContext.request.contextPath}/resources/css/slide.css" rel="stylesheet" type="text/css"/>  
+	    <link href="${pageContext.request.contextPath}/resources/css/book-detail.css" rel="stylesheet" type="text/css" /> 
 	</head>
 	<body>
 	    <header>
@@ -189,33 +188,7 @@
 			</form>
 	    </section>
 	    
-	    <footer>
-	        <ul>
-	            <li>
-	                <a href="javascript:void(0)">회사소개</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">인재채용</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">원고접수</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">제휴문의</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">고객센터</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">개인정보취급방침</a>
-	            </li>
-	            <li>
-	                <a href="javascript:void(0)">이용약관</a>
-	            </li>
-	        </ul>
-	        <hr />
-	        <p>Copyright © JSS Inc. All Rights Reserved</p>
-	    </footer>
-	    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/header.js"></script>
+		<%@ include file="footer.jsp" %>
+	    <script src="${pageContext.request.contextPath}/resources/js/book-category.js"></script>
 	</body>
 </html>
