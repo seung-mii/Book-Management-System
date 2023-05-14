@@ -1,4 +1,4 @@
-# common-project
+# Book Management System
 Spring MVC 구조 기반 도서 관리 시스템
 
 <br/>
